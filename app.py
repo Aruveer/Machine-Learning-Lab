@@ -239,14 +239,12 @@ with st.sidebar:
         [
             "🎯 Price Tier Predictor",
             "📊 Model Comparison & Leaderboard",
-            "🔬 EDA & Feature Importance",
-            "📋 Viva Examination Guide"
+            "🔬 EDA & Feature Importance"
         ]
     )
     st.markdown("---")
-    st.markdown("**Course:** Machine Learning Lab / Project")
-    st.markdown("**Institution:** IIT Madras (BS Degree)")
-    st.markdown("**Candidate:** `24f2003285`")
+    st.markdown("**Project:** Workspace Price Tier Prediction")
+    st.markdown("**Domain:** Multi-Class Classification")
 
 # -----------------------------------------------------------------------------
 # Module 1: Live Price Tier Predictor
@@ -462,47 +460,6 @@ elif app_mode == "🔬 EDA & Feature Importance":
        * `OneHotEncoder`: Applied to low-cardinality nominal features (`metro`, `access_type`, `bookable`).
        * `TargetEncoder(smoothing=10)`: Applied to high-cardinality features (`zone`, `borough`, `space_class`).
     """)
-
-# -----------------------------------------------------------------------------
-# Module 4: Viva Examination Guide
-# -----------------------------------------------------------------------------
-elif app_mode == "📋 Viva Examination Guide":
-    st.markdown('<div class="main-header">📋 IITM MLP Viva Defense Guide</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Prepared answers for common examiner questions (Level 1 & Level 2 Viva)</div>', unsafe_allow_html=True)
-
-    with st.expander("❓ Q1: Why did you evaluate 8 different models, and which one performed best?"):
-        st.markdown("""
-        **Answer:**
-        To systematically explore linear baselines (*Logistic Regression*), interpretable tree-based models (*Decision Tree*), bagging (*Random Forest*), gradient boosting (*XGBoost, LightGBM, CatBoost*), and ensembling (*Voting, Stacking*).
-        
-        The **Stacking Classifier** achieved the highest score (**Macro F1: 0.6887**), using *LightGBM*, *XGBoost*, and *Random Forest* as level-0 estimators and *Logistic Regression* as the meta-learner.
-        """)
-
-    with st.expander("❓ Q2: Why did you use Macro F1-score as the primary evaluation metric?"):
-        st.markdown("""
-        **Answer:**
-        Standard Accuracy can be deceptive in multi-class classification when classes are imbalanced. **Macro F1-score** computes the unweighted mean of F1-scores across all classes:
-        $$\\text{Macro } F_1 = \\frac{1}{K} \\sum_{k=1}^K F_{1, k}$$
-        This ensures our model performs reliably across all price tiers (Budget, Standard, Premium, Luxury) rather than overfitting to the majority class.
-        """)
-
-    with st.expander("❓ Q3: How did you handle high-cardinality categorical features like 'zone' and 'borough'?"):
-        st.markdown("""
-        **Answer:**
-        One-Hot Encoding high-cardinality features causes the curse of dimensionality and sparse matrices. Instead, we utilized **Target Encoding** (`category_encoders.TargetEncoder`) with empirical Bayes smoothing (`smoothing=10`) for `zone`, `borough`, and `space_class`. Low-cardinality binary features were encoded using `OneHotEncoder(handle_unknown='ignore')`.
-        """)
-
-    with st.expander("❓ Q4: How did you prevent data leakage during preprocessing?"):
-        st.markdown("""
-        **Answer:**
-        We partitioned the dataset into training (80%) and validation (20%) using **stratified sampling** *before* fitting any transformer. The `ColumnTransformer` (scaling and target encoding) was fit exclusively on `X_train` and only transformed on `X_val` and `test_df`.
-        """)
-
-    with st.expander("❓ Q5: How did you address class imbalance?"):
-        st.markdown("""
-        **Answer:**
-        We utilized `class_weight='balanced'` in Logistic Regression, Decision Trees, Random Forest, and LightGBM, which automatically adjusts weights inversely proportional to class frequencies. Stratified splitting was also applied in train-test split and cross-validation folds.
-        """)
 
 # -----------------------------------------------------------------------------
 # Footer
