@@ -29,11 +29,11 @@ A structured collection of weekly laboratory experiments, Jupyter Notebooks, dat
 
 ---
 
-## 📌 Course Project: Workspace Rental Price Tier Prediction
+## 📌 Course Project: Workspace Tier Classification (Multi-Class)
 
 * **Notebook:** [`code/classification-algorithms.ipynb`](code/classification-algorithms.ipynb)
 * **Web App:** [`app.py`](app.py) (Streamlit interactive prediction & model benchmark dashboard)
-* **Overview:** Multi-class classification project evaluating 8 machine learning algorithms (Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM, CatBoost, Soft Voting, Stacking Ensemble) to predict workspace rental pricing tiers (*Budget, Standard, Premium, Luxury*).
+* **Overview:** Multi-class classification project evaluating 8 machine learning algorithms (Logistic Regression, Decision Tree, Random Forest, XGBoost, LightGBM, CatBoost, Soft Voting, Stacking Ensemble) to categorize commercial workspaces into 4 discrete operational tiers (*Budget, Standard, Premium, Luxury*).
 
 ### 🖥️ Run the Streamlit Application
 ```bash

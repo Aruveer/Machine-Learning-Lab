@@ -6,7 +6,7 @@ import pandas as pd
 # Page Configuration
 # -----------------------------------------------------------------------------
 st.set_page_config(
-    page_title="Workspace Rental Price Tier Predictor",
+    page_title="Workspace Tier Classification (Multi-Class)",
     page_icon="🏢",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -237,21 +237,21 @@ with st.sidebar:
     app_mode = st.radio(
         "Select Module:",
         [
-            "🎯 Price Tier Predictor",
+            "🎯 Tier Predictor",
             "📊 Model Comparison & Leaderboard",
             "🔬 EDA & Feature Importance"
         ]
     )
     st.markdown("---")
-    st.markdown("**Project:** Workspace Price Tier Prediction")
+    st.markdown("**Project:** Workspace Tier Classification")
     st.markdown("**Domain:** Multi-Class Classification")
 
 # -----------------------------------------------------------------------------
-# Module 1: Live Price Tier Predictor
+# Module 1: Live Tier Predictor
 # -----------------------------------------------------------------------------
-if app_mode == "🎯 Price Tier Predictor":
-    st.markdown('<div class="main-header">🏢 Workspace Rental Price Tier Predictor</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Interactive Multi-Class Machine Learning Prediction for Workspace Properties</div>', unsafe_allow_html=True)
+if app_mode == "🎯 Tier Predictor":
+    st.markdown('<div class="main-header">🏢 Workspace Tier Classification (Multi-Class)</div>', unsafe_allow_html=True)
+    st.markdown('<div class="sub-header">Multi-Class Model for Automated Commercial Office Categorization</div>', unsafe_allow_html=True)
 
     col_model, col_blank = st.columns([2, 1])
     with col_model:
@@ -330,7 +330,7 @@ if app_mode == "🎯 Price Tier Predictor":
     st.markdown("---")
     
     # Predict button
-    if st.button("🚀 Predict Rental Price Tier", type="primary", use_container_width=True):
+    if st.button("🚀 Predict Tier (1–4)", type="primary", use_container_width=True):
         feature_dict = {
             "zone": zone,
             "space_class": space_class,
@@ -467,7 +467,7 @@ elif app_mode == "🔬 EDA & Feature Importance":
 st.markdown("---")
 st.markdown(
     "<div style='text-align: center; color: #6B7280; font-size: 0.9rem;'>"
-    "🏢 Workspace Rental Price Tier Prediction | Built with Streamlit & Scikit-Learn | Machine Learning Project"
+    "🏢 Workspace Tier Classification (Multi-Class) | Built with Streamlit & Scikit-Learn | Machine Learning Project"
     "</div>",
     unsafe_allow_html=True
 )
