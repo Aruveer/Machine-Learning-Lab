@@ -7,10 +7,9 @@ A structured collection of weekly laboratory experiments, Jupyter Notebooks, dat
 ## 📁 Repository Structure
 
 ```text
-├── code/       # Jupyter notebooks (.ipynb) for each experiment
+├── code/       # Jupyter notebooks (.ipynb) for lab experiments & course project
 ├── pdf/        # Lab reports, problem statements, and course handouts (.pdf)
-├── dataset/    # Datasets used across experiments (.csv)
-└── project/    # Course project implementations and comparative models
+└── dataset/    # Datasets used across experiments (.csv)
 ```
 
 ---
@@ -32,9 +31,8 @@ A structured collection of weekly laboratory experiments, Jupyter Notebooks, dat
 
 ## 📌 Course Project
 
-* **Folder:** `project/`
-* **Notebook:** [`project/classification-algorithms.ipynb`](project/classification-algorithms.ipynb)
-* **Description:** Comprehensive implementation and comparative evaluation of multiple classification algorithms for the course project.
+* **Notebook:** [`code/classification-algorithms.ipynb`](code/classification-algorithms.ipynb)
+* **Description:** Implementation and comparative evaluation of classification algorithms for the course project.
 
 ---
 
