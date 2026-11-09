@@ -9,7 +9,8 @@ A structured collection of weekly laboratory experiments, Jupyter Notebooks, dat
 ```text
 ├── code/       # Jupyter notebooks (.ipynb) for each experiment
 ├── pdf/        # Lab reports, problem statements, and course handouts (.pdf)
-└── dataset/    # Datasets used across experiments (.csv)
+├── dataset/    # Datasets used across experiments (.csv)
+└── project/    # Course project implementations and comparative models
 ```
 
 ---
@@ -26,6 +27,14 @@ A structured collection of weekly laboratory experiments, Jupyter Notebooks, dat
 | **06** | Unsupervised Clustering (K-Means & DBSCAN) | [Lab6.ipynb](code/Lab6.ipynb) | [Lab6.pdf](pdf/Lab6.pdf) | `Mall_Customers.csv` |
 | **07** | Binary Classification with Logistic Regression | [Lab7.ipynb](code/Lab7.ipynb) | [Lab7.pdf](pdf/Lab7.pdf) | `loan_approval_dataset.csv` |
 | **08** | Decision Tree Classifier & Depth Comparison | [Lab8.ipynb](code/Lab8.ipynb) | [Lab8.pdf](pdf/Lab8.pdf) | `loan_approval_dataset.csv` |
+
+---
+
+## 📌 Course Project
+
+* **Folder:** `project/`
+* **Notebook:** [`project/classification-algorithms.ipynb`](project/classification-algorithms.ipynb)
+* **Description:** Comprehensive implementation and comparative evaluation of multiple classification algorithms for the course project.
 
 ---
 
